@@ -23,25 +23,37 @@ export default function Contact() {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the data to your backend
-    console.log('Form submitted:', formData);
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        address: '',
-        bill: '',
-        existingSolar: 'No',
-        date: '',
-        time: '',
-        message: '',
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       });
-    }, 3000);
+
+      if (response.ok) {
+        setSubmitted(true);
+        setTimeout(() => {
+          setSubmitted(false);
+          setFormData({
+            name: '',
+            email: '',
+            phone: '',
+            address: '',
+            bill: '',
+            existingSolar: 'No',
+            date: '',
+            time: '',
+            message: '',
+          });
+        }, 3000);
+      }
+    } catch (error) {
+      console.error('Failed to submit form:', error);
+    }
   };
 
   return (

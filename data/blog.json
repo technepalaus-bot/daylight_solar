@@ -1,0 +1,15 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Benefits of Solar Energy in 2026",
+      "slug": "benefits-solar-2026",
+      "excerpt": "Discover the top benefits of switching to solar energy this year",
+      "content": "Solar energy continues to be the most efficient renewable energy source. In 2026, with improved battery storage technology and government incentives, now is the perfect time to go solar.",
+      "author": "Admin",
+      "date": "2026-01-13",
+      "image": "/img/solar1.jpeg",
+      "category": "Solar Tips"
+    }
+  ]
+}

@@ -247,6 +247,85 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Testimonials Section */}
+      <section className="py-24 px-4 bg-gradient-to-b from-gray-50 to-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16 space-y-4">
+            <h2 className="text-5xl font-bold text-gray-900">
+              What Our Customers Say
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Join thousands of happy customers saving money and protecting the planet
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Testimonial 1 */}
+            <div className="bg-white p-8 rounded-2xl shadow-lg border-2 border-yellow-100 hover:border-yellow-400 transition">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-14 h-14 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center text-white text-xl font-bold">
+                  JD
+                </div>
+                <div>
+                  <h3 className="font-bold text-gray-900">John Davis</h3>
+                  <p className="text-sm text-gray-600">Sydney, NSW</p>
+                </div>
+              </div>
+              <div className="flex text-yellow-400 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <span key={i}>⭐</span>
+                ))}
+              </div>
+              <p className="text-gray-700 leading-relaxed">
+                "The team at Daylight Solar was incredibly professional. My installation was completed in one day and I've already saved over $2000 in electricity bills in the first 6 months!"
+              </p>
+            </div>
+
+            {/* Testimonial 2 */}
+            <div className="bg-white p-8 rounded-2xl shadow-lg border-2 border-blue-100 hover:border-blue-400 transition">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-14 h-14 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-full flex items-center justify-center text-white text-xl font-bold">
+                  SM
+                </div>
+                <div>
+                  <h3 className="font-bold text-gray-900">Sarah Mitchell</h3>
+                  <p className="text-sm text-gray-600">Melbourne, VIC</p>
+                </div>
+              </div>
+              <div className="flex text-yellow-400 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <span key={i}>⭐</span>
+                ))}
+              </div>
+              <p className="text-gray-700 leading-relaxed">
+                "I was skeptical at first, but the free consultation and detailed ROI analysis convinced me. Now my energy bills are minimal and I'm generating clean energy!"
+              </p>
+            </div>
+
+            {/* Testimonial 3 */}
+            <div className="bg-white p-8 rounded-2xl shadow-lg border-2 border-green-100 hover:border-green-400 transition">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-14 h-14 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center text-white text-xl font-bold">
+                  ML
+                </div>
+                <div>
+                  <h3 className="font-bold text-gray-900">Michael Lee</h3>
+                  <p className="text-sm text-gray-600">Brisbane, QLD</p>
+                </div>
+              </div>
+              <div className="flex text-yellow-400 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <span key={i}>⭐</span>
+                ))}
+              </div>
+              <p className="text-gray-700 leading-relaxed">
+                "Best investment I've made for my home! The quality is outstanding and customer support is exceptional. Highly recommend Daylight Solar to everyone."
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-24 px-4 bg-white">
         <div className="max-w-4xl mx-auto text-center space-y-8">

@@ -17,6 +17,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Daylight Solar | Affordable Solar Solutions for Home & Business",
   description: "Leading solar energy solutions in Australia. Get free solar assessment, residential & commercial solar panels with 25+ years warranty.",
+  icons: {
+    icon: "/img/logo_color.webp",
+  },
 };
 
 export default function RootLayout({
