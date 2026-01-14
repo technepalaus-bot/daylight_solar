@@ -59,7 +59,7 @@ export default function Contact() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 to-cyan-800 text-white py-20 px-4">
+      <section className="bg-gradient-to-r from-blue-900 to-cyan-800 text-white py-20 px-4 mt-20">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl font-bold mb-4">Contact Us</h1>
           <p className="text-xl text-blue-100">Get in touch with our solar experts for a free consultation</p>
@@ -67,23 +67,24 @@ export default function Contact() {
       </section>
 
       {/* Contact Information */}
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-lg border border-blue-200 text-center">
-              <div className="text-5xl mb-4">📞</div>
+      <section className="py-16 px-4 bg-white relative">
+        <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-gray-50 to-transparent pointer-events-none"></div>
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 animate-fade-in-up">
+            <div className="group bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 text-center">
+              <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-blue-100 to-cyan-100 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition duration-300">📞</div>
               <h3 className="text-2xl font-bold mb-2 text-gray-900">Phone</h3>
-              <p className="text-gray-600 text-lg">0734226150</p>
+              <p className="text-gray-600 text-lg font-medium">0734226150</p>
             </div>
-            <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-lg border border-blue-200 text-center">
-              <div className="text-5xl mb-4">✉️</div>
+            <div className="group bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 text-center">
+              <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition duration-300">✉️</div>
               <h3 className="text-2xl font-bold mb-2 text-gray-900">Email</h3>
-              <p className="text-gray-600 text-lg">hello@daylightsolar.com.au</p>
+              <p className="text-gray-600 text-lg font-medium">hello@daylightsolar.com.au</p>
             </div>
-            <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-lg border border-blue-200 text-center">
-              <div className="text-5xl mb-4">📍</div>
+            <div className="group bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 text-center">
+              <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-green-100 to-emerald-100 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition duration-300">📍</div>
               <h3 className="text-2xl font-bold mb-2 text-gray-900">Office</h3>
-              <p className="text-gray-600 text-lg">1/30 Chancellor Village Blvd, Sippy Downs, 4556, QLD</p>
+              <p className="text-gray-600 text-lg font-medium">1/30 Chancellor Village Blvd, Sippy Downs, 4556, QLD</p>
             </div>
           </div>
         </div>
@@ -91,18 +92,18 @@ export default function Contact() {
 
       {/* Consultation Form */}
       <section className="bg-gray-50 py-16 px-4">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-3xl mx-auto animate-fade-in-up animation-delay-200">
           <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">
             Get Your Free Solar Consultation
           </h2>
           
           {submitted && (
-            <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
+            <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg animate-fade-in-up">
               ✓ Thank you! Your consultation request has been submitted. Our team will contact you shortly!
             </div>
           )}
 
-          <form onSubmit={handleSubmit} className="bg-white rounded-lg shadow-lg p-8">
+          <form onSubmit={handleSubmit} className="bg-white rounded-2xl shadow-xl border border-gray-100 p-8 md:p-12">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               <div>
                 <label className="block text-sm font-semibold text-gray-900 mb-2">Full Name *</label>

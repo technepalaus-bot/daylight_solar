@@ -53,26 +53,27 @@ export default function FreeConsultant() {
   return (
     <>
       {/* Hero Section */}
-      <section className="min-h-screen bg-white flex items-center justify-center px-4">
-        <div className="max-w-2xl mx-auto text-center py-20">
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            Free Solar Consultation
+      <section className="bg-gradient-to-b from-blue-50 to-white flex items-center justify-center px-4 mt-20 pb-20 pt-32">
+        <div className="max-w-2xl mx-auto text-center animate-fade-in-up">
+          <h1 className="text-5xl md:text-6xl font-black text-gray-900 mb-6 leading-tight">
+             Free Solar <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Consultation</span>
           </h1>
-          <p className="text-xl text-gray-600 mb-12">
+          <p className="text-xl text-gray-600 mb-12 leading-relaxed">
             Get a personalized solar assessment from our experts. No obligation, completely free.
           </p>
         </div>
       </section>
 
       {/* Consultation Form Section */}
-      <section className="py-20 px-4 bg-gray-50">
-        <div className="max-w-2xl mx-auto">
+      <section className="py-20 px-4 bg-white relative">
+         <div className="absolute inset-0 bg-gray-50/50 pointer-events-none skew-y-3 transform origin-top-left translate-y-20"></div>
+        <div className="max-w-2xl mx-auto relative z-10 animate-fade-in-up animation-delay-200">
           {submitted && (
-            <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
+            <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg animate-fade-in-up">
               ✓ Thank you! Your consultation request has been received. Our team will contact you shortly!
             </div>
           )}
-          <form onSubmit={handleSubmit} className="bg-white rounded-2xl shadow-lg p-8 md:p-12 space-y-6">
+          <form onSubmit={handleSubmit} className="bg-white rounded-3xl shadow-2xl p-8 md:p-12 space-y-6 border border-gray-100">
             {/* Name */}
             <div>
               <label className="block text-sm font-semibold text-gray-900 mb-3">Full Name</label>

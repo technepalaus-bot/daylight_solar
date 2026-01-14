@@ -10,7 +10,7 @@ export default function Solar() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-r from-cyan-900 to-blue-800 text-white py-20 px-4">
+      <section className="bg-gradient-to-r from-cyan-900 to-blue-800 text-white py-20 px-4 mt-20">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
             <div>
@@ -36,31 +36,42 @@ export default function Solar() {
       </section>
 
       {/* Products Overview */}
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">Our Premium Product Range</h2>
+      <section className="py-24 px-4 bg-white relative">
+        <div className="absolute inset-0 bg-blue-50/30 pointer-events-none"></div>
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="text-center mb-16 space-y-4 animate-fade-in-up">
+            <h2 className="text-4xl font-bold text-gray-900">Our Premium Product Range</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Comparing systems to find your perfect energy match
+            </p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
                 icon: '☀️',
                 title: 'Solar Panels',
-                desc: 'High-efficiency monocrystalline panels from leading global manufacturers with 25+ year warranty'
+                desc: 'High-efficiency monocrystalline panels from leading global manufacturers with 25+ year warranty',
+                gradient: 'from-yellow-400 to-orange-500'
               },
               {
                 icon: '🔋',
                 title: 'Battery Storage',
-                desc: 'Advanced lithium-ion battery systems to store excess energy and provide backup power'
+                desc: 'Advanced lithium-ion battery systems to store excess energy and provide backup power',
+                gradient: 'from-green-400 to-emerald-500'
               },
               {
                 icon: '⚙️',
                 title: 'Inverters',
-                desc: 'Smart inverters that convert DC power to AC with maximum efficiency and monitoring'
+                desc: 'Smart inverters that convert DC power to AC with maximum efficiency and monitoring',
+                gradient: 'from-blue-400 to-indigo-500'
               }
             ].map((product, i) => (
-              <div key={i} className="bg-gradient-to-br from-cyan-50 to-blue-50 p-8 rounded-lg border border-cyan-200 hover:shadow-lg transition text-center">
-                <div className="text-6xl mb-4">{product.icon}</div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900">{product.title}</h3>
-                <p className="text-gray-600">{product.desc}</p>
+              <div key={i} className="group bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 animate-fade-in-up animation-delay-200">
+                <div className={`w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br ${product.gradient} flex items-center justify-center text-5xl text-white shadow-lg group-hover:scale-110 transition duration-300`}>
+                  {product.icon}
+                </div>
+                <h3 className="text-2xl font-bold mb-3 text-gray-900 text-center">{product.title}</h3>
+                <p className="text-gray-600 text-center leading-relaxed">{product.desc}</p>
               </div>
             ))}
           </div>
@@ -68,36 +79,36 @@ export default function Solar() {
       </section>
 
       {/* Solar Panels Details */}
-      <section className="py-16 px-4 bg-gray-50">
+      <section className="py-24 px-4 bg-gray-50 overflow-hidden">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">Solar Panels</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <div className="bg-gradient-to-br from-yellow-400 to-orange-500 rounded-lg h-64 flex items-center justify-center mb-6">
-                <span className="text-7xl">☀️</span>
+          <h2 className="text-4xl font-bold text-center mb-16 text-gray-900">Solar Panels</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div className="relative animate-fade-in-up">
+              <div className="absolute inset-0 bg-gradient-to-br from-yellow-400 to-orange-500 blur-2xl opacity-20 transform -rotate-6 rounded-3xl"></div>
+              <div className="relative bg-white rounded-3xl shadow-2xl p-8 h-80 flex items-center justify-center border border-gray-100">
+                <span className="text-9xl filter drop-shadow-xl animate-float">☀️</span>
               </div>
             </div>
-            <div>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900">High-Efficiency Solar Panels</h3>
-              <p className="text-gray-600 mb-4">
+            <div className="animate-fade-in-up animation-delay-200">
+              <h3 className="text-3xl font-bold mb-6 text-gray-900">High-Efficiency Solar Panels</h3>
+              <p className="text-gray-600 mb-8 text-lg leading-relaxed">
                 Our solar panels are engineered to deliver maximum efficiency even in challenging Australian conditions. With an efficiency rating of 20%+, they convert more sunlight into electricity.
               </p>
-              <ul className="space-y-3 text-gray-600">
-                <li className="flex items-center gap-2">
-                  <span className="text-green-500">✓</span> High Efficiency (20%+ rating)
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-green-500">✓</span> 25 Year Product Warranty
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-green-500">✓</span> 25 Year Performance Warranty
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-green-500">✓</span> Weather Resistant Design
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-green-500">✓</span> Sustainable Manufacturing
-                </li>
+              <ul className="space-y-4">
+                {[
+                  'High Efficiency (20%+ rating)',
+                  '25 Year Product Warranty',
+                  '25 Year Performance Warranty',
+                  'Weather Resistant Design',
+                  'Sustainable Manufacturing'
+                ].map((item, i) => (
+                  <li key={i} className="flex items-center gap-3 text-gray-700 bg-white p-3 rounded-lg shadow-sm border border-gray-50">
+                    <span className="text-green-500 flex-shrink-0">
+                      <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center font-bold text-xs">✓</div>
+                    </span> 
+                    {item}
+                  </li>
+                ))}
               </ul>
             </div>
           </div>

@@ -10,7 +10,7 @@ export default function Residential() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-green-900 via-blue-800 to-cyan-700 text-white py-32 px-4 pt-40">
+      <section className="relative overflow-hidden bg-gradient-to-br from-green-900 via-blue-800 to-cyan-700 text-white py-32 px-4 mt-20">
         <div className="absolute inset-0 opacity-30">
           <div className="absolute top-0 -left-40 w-96 h-96 bg-green-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse animation-delay-2000"></div>
@@ -42,9 +42,10 @@ export default function Residential() {
       </section>
 
       {/* Benefits */}
-      <section className="py-24 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16 space-y-4">
+      <section className="py-24 px-4 bg-white relative">
+        <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-green-50 rounded-bl-full pointer-events-none opacity-50"></div>
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="text-center mb-16 space-y-4 animate-fade-in-up">
             <h2 className="text-5xl font-bold text-gray-900">Benefits for Your Home</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Everything you need to know about residential solar
@@ -52,52 +53,52 @@ export default function Residential() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="group p-8 bg-gradient-to-br from-yellow-50 to-orange-50 rounded-2xl border-2 border-yellow-200 hover:border-yellow-400 hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
-              <div className="p-4 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-lg inline-block mb-6">
-                <DollarSign className="w-8 h-8 text-white" />
+            <div className="group p-8 bg-white border border-gray-100 shadow-sm rounded-2xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-fade-in-up animation-delay-200">
+              <div className="p-4 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl shadow-lg inline-block mb-6 text-white group-hover:scale-110 transition duration-300">
+                <DollarSign className="w-8 h-8" />
               </div>
               <h3 className="text-2xl font-bold mb-2 text-gray-900">Lower Bills</h3>
-              <p className="text-gray-700">Reduce your monthly electricity bills by up to 100%</p>
+              <p className="text-gray-600 text-lg">Reduce your monthly electricity bills by up to 100%</p>
             </div>
 
-            <div className="group p-8 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl border-2 border-blue-200 hover:border-blue-400 hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
-              <div className="p-4 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-lg inline-block mb-6">
-                <TrendingUp className="w-8 h-8 text-white" />
+            <div className="group p-8 bg-white border border-gray-100 shadow-sm rounded-2xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-fade-in-up animation-delay-400">
+              <div className="p-4 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-2xl shadow-lg inline-block mb-6 text-white group-hover:scale-110 transition duration-300">
+                <TrendingUp className="w-8 h-8" />
               </div>
               <h3 className="text-2xl font-bold mb-2 text-gray-900">Increase Home Value</h3>
-              <p className="text-gray-700">Solar systems increase your property value by 4-5%</p>
+              <p className="text-gray-600 text-lg">Solar systems increase your property value by 4-5%</p>
             </div>
 
-            <div className="group p-8 bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl border-2 border-green-200 hover:border-green-400 hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
-              <div className="p-4 bg-gradient-to-br from-green-400 to-emerald-500 rounded-lg inline-block mb-6">
-                <Leaf className="w-8 h-8 text-white" />
+            <div className="group p-8 bg-white border border-gray-100 shadow-sm rounded-2xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-fade-in-up animation-delay-2000">
+              <div className="p-4 bg-gradient-to-br from-green-400 to-emerald-500 rounded-2xl shadow-lg inline-block mb-6 text-white group-hover:scale-110 transition duration-300">
+                <Leaf className="w-8 h-8" />
               </div>
               <h3 className="text-2xl font-bold mb-2 text-gray-900">Environmental Impact</h3>
-              <p className="text-gray-700">Reduce your carbon footprint and help the planet</p>
+              <p className="text-gray-600 text-lg">Reduce your carbon footprint and help the planet</p>
             </div>
 
-            <div className="group p-8 bg-gradient-to-br from-pink-50 to-red-50 rounded-2xl border-2 border-pink-200 hover:border-pink-400 hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
-              <div className="p-4 bg-gradient-to-br from-pink-400 to-red-500 rounded-lg inline-block mb-6">
-                <Zap className="w-8 h-8 text-white" />
+            <div className="group p-8 bg-white border border-gray-100 shadow-sm rounded-2xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-fade-in-up animation-delay-200">
+              <div className="p-4 bg-gradient-to-br from-pink-400 to-red-500 rounded-2xl shadow-lg inline-block mb-6 text-white group-hover:scale-110 transition duration-300">
+                <Zap className="w-8 h-8" />
               </div>
               <h3 className="text-2xl font-bold mb-2 text-gray-900">Energy Independence</h3>
-              <p className="text-gray-700">Generate your own clean electricity daily</p>
+              <p className="text-gray-600 text-lg">Generate your own clean electricity daily</p>
             </div>
 
-            <div className="group p-8 bg-gradient-to-br from-purple-50 to-indigo-50 rounded-2xl border-2 border-purple-200 hover:border-purple-400 hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
-              <div className="p-4 bg-gradient-to-br from-purple-400 to-indigo-500 rounded-lg inline-block mb-6">
-                <Shield className="w-8 h-8 text-white" />
+            <div className="group p-8 bg-white border border-gray-100 shadow-sm rounded-2xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-fade-in-up animation-delay-400">
+              <div className="p-4 bg-gradient-to-br from-purple-400 to-indigo-500 rounded-2xl shadow-lg inline-block mb-6 text-white group-hover:scale-110 transition duration-300">
+                <Shield className="w-8 h-8" />
               </div>
               <h3 className="text-2xl font-bold mb-2 text-gray-900">25+ Year Warranty</h3>
-              <p className="text-gray-700">Long term protection and reliable performance</p>
+              <p className="text-gray-600 text-lg">Long term protection and reliable performance</p>
             </div>
 
-            <div className="group p-8 bg-gradient-to-br from-cyan-50 to-blue-50 rounded-2xl border-2 border-cyan-200 hover:border-cyan-400 hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
-              <div className="p-4 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg inline-block mb-6">
-                <Home className="w-8 h-8 text-white" />
+            <div className="group p-8 bg-white border border-gray-100 shadow-sm rounded-2xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-fade-in-up animation-delay-2000">
+              <div className="p-4 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl shadow-lg inline-block mb-6 text-white group-hover:scale-110 transition duration-300">
+                <Home className="w-8 h-8" />
               </div>
               <h3 className="text-2xl font-bold mb-2 text-gray-900">For Every Home</h3>
-              <p className="text-gray-700">Custom solutions for all home sizes</p>
+              <p className="text-gray-600 text-lg">Custom solutions for all home sizes</p>
             </div>
           </div>
         </div>

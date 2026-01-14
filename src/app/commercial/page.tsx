@@ -9,7 +9,7 @@ export default function Commercial() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-r from-purple-900 to-blue-800 text-white py-20 px-4">
+      <section className="bg-gradient-to-r from-purple-900 to-blue-800 text-white py-20 px-4 mt-20">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
             <div>
@@ -24,9 +24,10 @@ export default function Commercial() {
       </section>
 
       {/* ROI Section */}
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">Business Benefits</h2>
+      <section className="py-16 px-4 bg-white relative">
+         <div className="absolute inset-0 bg-blue-50/50 pointer-events-none mb-32 h-1/2"></div>
+         <div className="max-w-7xl mx-auto relative z-10">
+          <h2 className="text-4xl font-bold text-center mb-12 text-gray-900 animate-fade-in-up">Business Benefits</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               { icon: '💼', title: 'Reduce Costs', desc: 'Cut operational expenses with free solar energy' },
@@ -36,10 +37,10 @@ export default function Commercial() {
               { icon: '🌱', title: 'Sustainability', desc: 'Meet corporate environmental goals' },
               { icon: '⚡', title: 'Energy Security', desc: 'Protect against rising electricity rates' }
             ].map((item, i) => (
-              <div key={i} className="bg-gradient-to-br from-purple-50 to-blue-50 p-6 rounded-lg border border-purple-200 hover:shadow-lg transition">
-                <div className="text-4xl mb-3">{item.icon}</div>
-                <h3 className="font-bold text-lg mb-2 text-gray-900">{item.title}</h3>
-                <p className="text-gray-600">{item.desc}</p>
+              <div key={i} className={`p-8 rounded-2xl border border-gray-100 bg-white shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-fade-in-up animation-delay-${(i % 3) * 200 + 200}`}>
+                <div className="text-5xl mb-4 transform group-hover:scale-110 transition">{item.icon}</div>
+                <h3 className="font-bold text-xl mb-3 text-gray-900">{item.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -47,33 +48,40 @@ export default function Commercial() {
       </section>
 
       {/* Solutions */}
-      <section className="py-16 px-4 bg-gray-50">
+      <section className="py-24 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">Tailored Solutions for Your Business</h2>
+          <h2 className="text-4xl font-bold text-center mb-16 text-gray-900">Tailored Solutions for Your Business</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
                 title: 'Small Businesses',
                 desc: 'Perfect for retail stores, offices, and service businesses looking to reduce overhead costs.',
-                systems: '5-15 kW'
+                systems: '5-15 kW',
+                gradient: 'from-blue-400 to-indigo-500'
               },
               {
                 title: 'Medium Enterprises',
                 desc: 'Scalable solutions for manufacturing facilities, warehouses, and multi-unit properties.',
-                systems: '15-50 kW'
+                systems: '15-50 kW',
+                gradient: 'from-indigo-400 to-purple-500'
               },
               {
                 title: 'Large Corporations',
                 desc: 'Enterprise-level solar systems with battery storage and advanced monitoring.',
-                systems: '50+ kW'
+                systems: '50+ kW',
+                gradient: 'from-purple-400 to-pink-500'
               }
             ].map((solution, i) => (
-              <div key={i} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
-                <div className="h-32 bg-gradient-to-r from-purple-400 to-blue-500"></div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-3 text-gray-900">{solution.title}</h3>
-                  <p className="text-gray-600 mb-4">{solution.desc}</p>
-                  <p className="text-purple-600 font-semibold">{solution.systems}</p>
+               <div key={i} className="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-2xl transition hover:-translate-y-2 duration-300 animate-fade-in-up">
+                <div className={`h-40 bg-gradient-to-r ${solution.gradient} flex items-center justify-center p-6 text-white text-center`}>
+                    <div className="text-4xl font-black opacity-30">{solution.systems}</div>
+                </div>
+                <div className="p-8">
+                  <h3 className="text-2xl font-bold mb-3 text-gray-900">{solution.title}</h3>
+                  <p className="text-gray-600 mb-6 leading-relaxed">{solution.desc}</p>
+                  <div className="inline-block px-4 py-1.5 rounded-full bg-gray-100 text-gray-800 text-sm font-semibold">
+                    Capacity: {solution.systems}
+                  </div>
                 </div>
               </div>
             ))}

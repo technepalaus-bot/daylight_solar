@@ -31,7 +31,7 @@ export default function AdminLogin() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 to-cyan-800 flex items-center justify-center px-4">
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 to-cyan-800 flex items-center justify-center px-4 mt-20">
       <div className="w-full max-w-md">
         <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12">
           <h1 className="text-4xl font-bold text-center mb-2 text-gray-900">Admin Panel</h1>

@@ -11,7 +11,7 @@ export default function Products() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-blue-900 via-cyan-800 to-teal-700 text-white py-32 px-4 pt-40">
+      <section className="relative overflow-hidden bg-gradient-to-br from-blue-900 via-cyan-800 to-teal-700 text-white py-32 px-4 mt-20">
         <div className="absolute inset-0 opacity-30">
           <div className="absolute top-0 -right-40 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
@@ -129,60 +129,63 @@ export default function Products() {
       </section>
 
       {/* Smart Inverters Section */}
-      <section className="py-24 px-4 bg-white">
+      <section className="py-24 px-4 bg-white relative">
+        <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-slate-900/10 to-transparent pointer-events-none"></div>
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-5xl font-bold text-center mb-4 text-gray-900">Smart Inverters</h2>
-          <p className="text-center text-xl text-gray-600 mb-16 max-w-3xl mx-auto">
-            Advanced conversion technology that maximizes efficiency and provides real-time monitoring
-          </p>
+          <div className="text-center mb-16 space-y-4 animate-fade-in-up">
+            <h2 className="text-5xl font-bold text-gray-900">Smart Inverters</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Advanced conversion technology that maximizes efficiency and provides real-time monitoring
+            </p>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="group p-8 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl border-2 border-blue-200 hover:border-blue-400 hover:shadow-xl transition duration-300">
-              <div className="p-4 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg inline-block mb-6">
+            <div className="group p-8 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 animate-fade-in-up animation-delay-200">
+              <div className="w-16 h-16 mb-6 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center shadow-lg group-hover:scale-110 transition duration-300">
                 <Zap className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold mb-3 text-gray-900">High Efficiency</h3>
-              <p className="text-gray-700">98%+ conversion efficiency with minimal power loss</p>
+              <p className="text-gray-600">98%+ conversion efficiency with minimal power loss</p>
             </div>
 
-            <div className="group p-8 bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl border-2 border-purple-200 hover:border-purple-400 hover:shadow-xl transition duration-300">
-              <div className="p-4 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg inline-block mb-6">
+            <div className="group p-8 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 animate-fade-in-up animation-delay-400">
+              <div className="w-16 h-16 mb-6 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center shadow-lg group-hover:scale-110 transition duration-300">
                 <Sliders className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold mb-3 text-gray-900">Smart Control</h3>
-              <p className="text-gray-700">Real-time monitoring and optimization of your system</p>
+              <p className="text-gray-600">Real-time monitoring and optimization of your system</p>
             </div>
 
-            <div className="group p-8 bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl border-2 border-green-200 hover:border-green-400 hover:shadow-xl transition duration-300">
-              <div className="p-4 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg inline-block mb-6">
+            <div className="group p-8 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 animate-fade-in-up animation-delay-2000">
+              <div className="w-16 h-16 mb-6 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center shadow-lg group-hover:scale-110 transition duration-300">
                 <CheckCircle className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold mb-3 text-gray-900">Grid Compatible</h3>
-              <p className="text-gray-700">Seamless integration with battery and grid systems</p>
+              <p className="text-gray-600">Seamless integration with battery and grid systems</p>
             </div>
 
-            <div className="group p-8 bg-gradient-to-br from-orange-50 to-yellow-50 rounded-2xl border-2 border-orange-200 hover:border-orange-400 hover:shadow-xl transition duration-300">
-              <div className="p-4 bg-gradient-to-br from-orange-500 to-yellow-500 rounded-lg inline-block mb-6">
+            <div className="group p-8 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 animate-fade-in-up animation-delay-200">
+              <div className="w-16 h-16 mb-6 rounded-2xl bg-gradient-to-br from-orange-500 to-yellow-500 flex items-center justify-center shadow-lg group-hover:scale-110 transition duration-300">
                 <Zap className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold mb-3 text-gray-900">Advanced Safety</h3>
-              <p className="text-gray-700">Built-in protection with compliance certifications</p>
+              <p className="text-gray-600">Built-in protection with compliance certifications</p>
             </div>
 
-            <div className="group p-8 bg-gradient-to-br from-red-50 to-pink-50 rounded-2xl border-2 border-red-200 hover:border-red-400 hover:shadow-xl transition duration-300">
-              <div className="p-4 bg-gradient-to-br from-red-500 to-pink-500 rounded-lg inline-block mb-6">
+            <div className="group p-8 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 animate-fade-in-up animation-delay-400">
+              <div className="w-16 h-16 mb-6 rounded-2xl bg-gradient-to-br from-red-500 to-pink-500 flex items-center justify-center shadow-lg group-hover:scale-110 transition duration-300">
                 <Sliders className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold mb-3 text-gray-900">Easy Setup</h3>
-              <p className="text-gray-700">Plug-and-play installation with professional support</p>
+              <p className="text-gray-600">Plug-and-play installation with professional support</p>
             </div>
 
-            <div className="group p-8 bg-gradient-to-br from-indigo-50 to-blue-50 rounded-2xl border-2 border-indigo-200 hover:border-indigo-400 hover:shadow-xl transition duration-300">
-              <div className="p-4 bg-gradient-to-br from-indigo-500 to-blue-500 rounded-lg inline-block mb-6">
+            <div className="group p-8 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 animate-fade-in-up animation-delay-2000">
+              <div className="w-16 h-16 mb-6 rounded-2xl bg-gradient-to-br from-indigo-500 to-blue-500 flex items-center justify-center shadow-lg group-hover:scale-110 transition duration-300">
                 <CheckCircle className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold mb-3 text-gray-900">10 Year Warranty</h3>
-              <p className="text-gray-700">Full replacement coverage and support</p>
+              <p className="text-gray-600">Full replacement coverage and support</p>
             </div>
           </div>
         </div>

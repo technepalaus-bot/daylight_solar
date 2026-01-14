@@ -10,9 +10,9 @@ const SolarPanelRotating3D = dynamic(() => import('@/components/SolarPanelRotati
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white pt-20">
+    <div className="min-h-screen bg-white">
       {/* Hero Section - Modern with Background Image */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-cyan-800 text-white min-h-screen flex items-center pt-20">
+      <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-cyan-800 text-white min-h-screen flex items-center mt-20">
         {/* Background gradient overlay */}
         <div className="absolute inset-0 opacity-40">
           <div className="absolute top-0 -left-40 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
@@ -77,10 +77,16 @@ export default function Home() {
       </section>
 
       {/* Benefits Section - Modern Cards */}
-      <section className="py-24 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16 space-y-4">
-            <h2 className="text-5xl font-bold text-gray-900">
+      <section className="py-24 px-4 bg-white relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none opacity-50">
+           <div className="absolute -top-[10%] -left-[10%] w-[40%] h-[40%] bg-blue-100 rounded-full blur-3xl opacity-40 animate-pulse"></div>
+           <div className="absolute top-[20%] right-[10%] w-[30%] h-[30%] bg-orange-50 rounded-full blur-3xl opacity-40 animate-pulse animation-delay-2000"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="text-center mb-16 space-y-4 animate-fade-in-up">
+            <h2 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 inline-block">
               Why Choose Solar?
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -89,22 +95,22 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="group p-8 bg-gradient-to-br from-yellow-50 to-orange-50 rounded-2xl border-2 border-yellow-200 hover:border-yellow-400 transition duration-300 hover:shadow-xl transform hover:-translate-y-2">
-              <div className="text-6xl mb-4 group-hover:scale-110 transition duration-300">💰</div>
+            <div className="group p-8 bg-white/50 backdrop-blur-sm rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 animate-fade-in-up animation-delay-200">
+              <div className="w-16 h-16 mb-6 rounded-2xl bg-gradient-to-br from-orange-400 to-yellow-400 flex items-center justify-center text-3xl shadow-lg group-hover:scale-110 transition duration-300 text-white">💰</div>
               <h3 className="text-2xl font-bold mb-3 text-gray-900">Save 50-80%</h3>
-              <p className="text-gray-700 text-lg">On your electricity bills, starting immediately and growing with time.</p>
+              <p className="text-gray-600 text-lg leading-relaxed">On your electricity bills, starting immediately and growing with time.</p>
             </div>
 
-            <div className="group p-8 bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl border-2 border-green-200 hover:border-green-400 transition duration-300 hover:shadow-xl transform hover:-translate-y-2">
-              <div className="text-6xl mb-4 group-hover:scale-110 transition duration-300">🌱</div>
+            <div className="group p-8 bg-white/50 backdrop-blur-sm rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 animate-fade-in-up animation-delay-400">
+              <div className="w-16 h-16 mb-6 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-400 flex items-center justify-center text-3xl shadow-lg group-hover:scale-110 transition duration-300 text-white">🌱</div>
               <h3 className="text-2xl font-bold mb-3 text-gray-900">Help the Planet</h3>
-              <p className="text-gray-700 text-lg">Reduce your carbon footprint with clean, renewable energy every day.</p>
+              <p className="text-gray-600 text-lg leading-relaxed">Reduce your carbon footprint with clean, renewable energy every day.</p>
             </div>
 
-            <div className="group p-8 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl border-2 border-blue-200 hover:border-blue-400 transition duration-300 hover:shadow-xl transform hover:-translate-y-2">
-              <div className="text-6xl mb-4 group-hover:scale-110 transition duration-300">📈</div>
+            <div className="group p-8 bg-white/50 backdrop-blur-sm rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 animate-fade-in-up animation-delay-2000">
+              <div className="w-16 h-16 mb-6 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center text-3xl shadow-lg group-hover:scale-110 transition duration-300 text-white">📈</div>
               <h3 className="text-2xl font-bold mb-3 text-gray-900">Increase Home Value</h3>
-              <p className="text-gray-700 text-lg">Solar systems add 4-5% to your property value instantly.</p>
+              <p className="text-gray-600 text-lg leading-relaxed">Solar systems add 4-5% to your property value instantly.</p>
             </div>
           </div>
         </div>
