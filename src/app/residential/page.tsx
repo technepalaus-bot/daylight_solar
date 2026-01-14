@@ -10,26 +10,27 @@ export default function Residential() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-green-900 via-blue-800 to-cyan-700 text-white py-32 px-4 mt-20">
+      <section className="relative overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-32 px-4 mt-20">
+        <div className="absolute inset-0 bg-gradient-to-tr from-yellow-400/20 via-orange-400/10 to-yellow-500/20 -z-10"></div>
         <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-0 -left-40 w-96 h-96 bg-green-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
+          <div className="absolute top-0 -left-40 w-96 h-96 bg-yellow-400 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse animation-delay-2000"></div>
         </div>
 
         <div className="relative max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
             <div className="space-y-8">
-              <h1 className="text-6xl lg:text-7xl font-black">
-                Solar for Your <span className="bg-gradient-to-r from-green-300 to-emerald-300 bg-clip-text text-transparent">Home</span>
+              <h1 className="text-6xl lg:text-7xl font-black drop-shadow-lg">
+                Solar for Your <span className="bg-gradient-to-r from-yellow-300 to-orange-400 bg-clip-text text-transparent">Home</span>
               </h1>
-              <p className="text-2xl text-green-100">
+              <p className="text-2xl text-blue-100">
                 Reduce energy bills, increase home value, and enjoy energy independence with custom residential solar solutions.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link href="/consultant" className="px-8 py-4 bg-gradient-to-r from-green-400 to-emerald-500 text-gray-900 font-bold text-lg rounded-full hover:shadow-2xl transform hover:scale-105 transition duration-300">
+                <Link href="/consultant" className="px-8 py-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-blue-900 font-bold text-lg rounded-full hover:shadow-2xl transform hover:scale-105 transition duration-300">
                   Get Free Assessment
                 </Link>
-                <Link href="/contact" className="px-8 py-4 border-2 border-white text-white font-bold text-lg rounded-full hover:bg-white hover:text-gray-900 transition duration-300">
+                <Link href="/contact" className="px-8 py-4 border-2 border-white text-white font-bold text-lg rounded-full hover:bg-white hover:text-blue-900 transition duration-300">
                   Learn More
                 </Link>
               </div>
@@ -42,12 +43,12 @@ export default function Residential() {
       </section>
 
       {/* Benefits */}
-      <section className="py-24 px-4 bg-white relative">
-        <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-green-50 rounded-bl-full pointer-events-none opacity-50"></div>
+      <section className="py-24 px-4 bg-gradient-to-b from-blue-900 to-blue-800 relative">
+        <div className="absolute inset-0 bg-gradient-to-tr from-yellow-400/10 via-transparent to-orange-400/10 -z-10"></div>
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16 space-y-4 animate-fade-in-up">
-            <h2 className="text-5xl font-bold text-gray-900">Benefits for Your Home</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <h2 className="text-5xl font-bold text-white drop-shadow-lg">Benefits for Your Home</h2>
+            <p className="text-xl text-blue-100 max-w-2xl mx-auto">
               Everything you need to know about residential solar
             </p>
           </div>

@@ -9,11 +9,12 @@ export default function Commercial() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-r from-purple-900 to-blue-800 text-white py-20 px-4 mt-20">
-        <div className="max-w-7xl mx-auto">
+      <section className="relative overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-32 px-4 mt-20">
+        <div className="absolute inset-0 bg-gradient-to-tr from-yellow-400/20 via-orange-400/10 to-yellow-500/20 -z-10"></div>
+        <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
             <div>
-              <h1 className="text-5xl font-bold mb-4">Commercial Solar Solutions</h1>
+              <h1 className="text-5xl lg:text-6xl font-bold mb-4 text-white drop-shadow-lg">Commercial Solar Solutions</h1>
               <p className="text-xl text-blue-100">Reduce operational costs and boost your bottom line</p>
             </div>
             <div className="flex justify-center">
@@ -24,10 +25,10 @@ export default function Commercial() {
       </section>
 
       {/* ROI Section */}
-      <section className="py-16 px-4 bg-white relative">
-         <div className="absolute inset-0 bg-blue-50/50 pointer-events-none mb-32 h-1/2"></div>
+      <section className="py-16 px-4 bg-gradient-to-b from-blue-900 to-blue-800 relative">
+        <div className="absolute inset-0 bg-gradient-to-tr from-yellow-400/10 via-transparent to-orange-400/10 -z-10"></div>
          <div className="max-w-7xl mx-auto relative z-10">
-          <h2 className="text-4xl font-bold text-center mb-12 text-gray-900 animate-fade-in-up">Business Benefits</h2>
+          <h2 className="text-4xl font-bold text-center mb-12 text-white drop-shadow-lg animate-fade-in-up">Business Benefits</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               { icon: '💼', title: 'Reduce Costs', desc: 'Cut operational expenses with free solar energy' },
@@ -37,10 +38,10 @@ export default function Commercial() {
               { icon: '🌱', title: 'Sustainability', desc: 'Meet corporate environmental goals' },
               { icon: '⚡', title: 'Energy Security', desc: 'Protect against rising electricity rates' }
             ].map((item, i) => (
-              <div key={i} className={`p-8 rounded-2xl border border-gray-100 bg-white shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-fade-in-up animation-delay-${(i % 3) * 200 + 200}`}>
+              <div key={i} className={`p-8 rounded-2xl border-2 border-yellow-400/40 bg-blue-800/50 backdrop-blur-sm shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-fade-in-up animation-delay-${(i % 3) * 200 + 200}`}>
                 <div className="text-5xl mb-4 transform group-hover:scale-110 transition">{item.icon}</div>
-                <h3 className="font-bold text-xl mb-3 text-gray-900">{item.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{item.desc}</p>
+                <h3 className="font-bold text-xl mb-3 text-white">{item.title}</h3>
+                <p className="text-blue-100 leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
